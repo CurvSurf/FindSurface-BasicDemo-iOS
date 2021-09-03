@@ -8,20 +8,6 @@ This sample source code demonstrates the basic usage of FindSurface for a simple
 
 
 
-## How to build
-
-**Prerequisites**:
-
-- Xcode ()
-- FindSurfaceFramework for iOS
-- an iOS device for development that supports SwiftUI[^1] (iOS 13.0+)
-
-[^1]: 
-
-There are not much to modify from the template project that Xcode provides. 
-
-
-
 ## Using FindSurface APIs
 
 Look at  `runFindSurfaceDemo` function of [FindSurfaceDemo.swift](src/FindSurfaceDemo.swift) file first, where FindSurface APIs are called. The source code in the function describes the following 4 steps:
