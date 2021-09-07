@@ -29,7 +29,7 @@ fsCtx.setPointCloudData(points,
                         pointStride: MemoryLayout<Float32>.stride * 3,
                         useDoublePrecision: false)
 ````
-When an application is ready for an input point cloud, pass it to FindSurface along with parameters related to the points. Refer to [here](TBD) for the meanings of the parameters.
+When an application is ready for an input point cloud, pass it to FindSurface along with parameters related to the points. Refer to [here](https://github.com/CurvSurf/FindSurface#how-does-it-work) for the meanings of the parameters.
 
 ### Invoking FindSurface algorithm
 ````swift
@@ -60,11 +60,11 @@ guard let result = try? runTest(fsCtx: fsCtx, preset, seedRadius: seedRadius) el
 }
 ````
 
-The parameters of  `findSurface` method are composed of `featureType`, `seedIndex`, and `seedRadius`. The `featureType` is an enum value of `FindSurface.FeatureType`, which can be one of the five geometric shapes (i.e., `plane`, `sphere`, `cylinder`, `cone`, `torus`) and `any`, which means "try finding one of the five". Refer to [here] for the detailed descriptions of the parameters.
+The parameters of  `findSurface` method are composed of `featureType`, `seedIndex`, and `seedRadius`. The `featureType` is an enum value of `FindSurface.FeatureType`, which can be one of the five geometric shapes (i.e., `plane`, `sphere`, `cylinder`, `cone`, `torus`) and `any`, which means "try finding one of the five". Refer to [here](https://github.com/CurvSurf/FindSurface#how-does-it-work) for the detailed descriptions of the parameters.
 
 This method returns a result as an optional form of abstract type, such as Objective-C's `@interface`, which is also named `FindSurfaceResult` that every geometric surface types inherits. If the method fails to detect any geometric shape, the method returns `nil`.
 
-FindSurface throws an `Error` if it fails to execute its algorithm for any reason (e.g., an invalid parameter value, lack of memory). `Error` is enumeration that describe a cause of the error. It is recommended to design your application defensively so that your application does not have to catch any error other than the "out of memory" case in run-time. Refer to [here] for the cases of when FindSurface throws an `Error`.
+FindSurface throws an `Error` if it fails to execute its algorithm for any reason (e.g., an invalid parameter value, lack of memory). `Error` is enumeration that describe a cause of the error. It is recommended to design your application defensively so that your application does not have to catch any error other than the "out of memory" case in run-time. Refer to [here](TBD) for the cases of when FindSurface throws an `Error`.
 
 ### Fetching the Result
 
@@ -73,7 +73,7 @@ FindSurface throws an `Error` if it fails to execute its algorithm for any reaso
 let rms = result.rmsError
 ````
 
-The `rmsError` property describes the root-mean-square value of errors in orthogonal distance, which means distances in normal direction between inlier points and the surface model that FindSurface detects. The value describes how much of the points fits the geometric model well and it is not related to the algorithm's accuracy. This value will get greater as the points have greater errors in measurement, which means the result also be affected by the errors.
+The `rmsError` property describes the root-mean-squared value of errors in orthogonal distance, which means distances in normal direction between inlier points and the surface model that FindSurface detects. The value describes how much the points fits the geometric model well and it is not related to the algorithm's accuracy. This value will get greater as the points have greater errors in measurement, which means the result also be affected by the errors.
 
 ````swift
 // the `result` is the unwrapped instance of the `FindSurfaceResult`
@@ -117,8 +117,6 @@ else if let sphere = result as? FindSphereResult {
 
 
 ## About point cloud
-
---------------------
 
 The point cloud in this demo is the same as the sample used in FindSurface WebDemo. Please refer to the [WebDemo](https://developers.curvsurf.com/WebDemo/) for a visual representation of FindSurface's results. 
 
