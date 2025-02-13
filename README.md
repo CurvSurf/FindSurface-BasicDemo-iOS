@@ -9,7 +9,8 @@ You will see the following content in this app:
 
 ![sample-image.png](images/sample-image.png)
 
-## [FindSurface Library Package]()
+
+## [FindSurface Library Package](https://www.github.com/CurvSurf/FindSurface-iOS)
 
 Unlike the older version of this demo, you don't need to download or setup the binary path for your project since the library is provided as a Swift package.
 
