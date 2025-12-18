@@ -1,6 +1,8 @@
 # FindSurface-BasicDemo-iOS (Swift)
 **Curv*Surf* FindSurface™** BasicDemo for iOS (Swift)
 
+[FindSurface](https://github.com/CurvSurf/FindSurface) / [FindSurface-iOS](https://github.com/CurvSurf/FindSurface-iOS)
+
 ## Overview
 
 This sample source code demonstrates the basic usage of FindSurface for a simple task, which attempts to search for specific geometry shapes in a pre-defined point cloud data. (i.e., it performs the minimal tests to check if FindSurface is working properly on your device.)
@@ -18,4 +20,3 @@ Unlike the older version of this demo, you don't need to download or setup the b
 ## About the point cloud
 
 The point cloud in this demo is the same as the sample used in FindSurface WebDemo. Please refer to the [WebDemo](https://developers.curvsurf.com/WebDemo/) for a visual representation of FindSurface's results.
-
